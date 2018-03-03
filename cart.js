@@ -1,9 +1,9 @@
-$(()=>{
+$(function(){
 $.ajax({
   type:"get",
   url:"data/cart/shoppingcart.php",
   dataType:"json"
-}).then(data=>{
+}).then(function(data){
   if(data.ok==-1){
     alert("请登录");
     location.href = "login.html?back=shoppingcart.html"
